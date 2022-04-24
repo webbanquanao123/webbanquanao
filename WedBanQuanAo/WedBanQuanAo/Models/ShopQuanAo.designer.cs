@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WedBanQuanAo.Models
+namespace WebBanQuanAo.Models
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -960,6 +960,8 @@ namespace WedBanQuanAo.Models
 		
 		private int _MAHD;
 		
+		private string _TENTK;
+		
 		private System.Nullable<System.DateTime> _NGTAO;
 		
 		private System.Nullable<double> _THANHTOAN;
@@ -972,12 +974,16 @@ namespace WedBanQuanAo.Models
 		
 		private EntityRef<KHUYENMAI> _KHUYENMAI;
 		
+		private EntityRef<TAIKHOAN> _TAIKHOAN;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
     partial void OnMAHDChanging(int value);
     partial void OnMAHDChanged();
+    partial void OnTENTKChanging(string value);
+    partial void OnTENTKChanged();
     partial void OnNGTAOChanging(System.Nullable<System.DateTime> value);
     partial void OnNGTAOChanged();
     partial void OnTHANHTOANChanging(System.Nullable<double> value);
@@ -991,6 +997,7 @@ namespace WedBanQuanAo.Models
 			this._CHITIETHDs = new EntitySet<CHITIETHD>(new Action<CHITIETHD>(this.attach_CHITIETHDs), new Action<CHITIETHD>(this.detach_CHITIETHDs));
 			this._DOITRAs = new EntitySet<DOITRA>(new Action<DOITRA>(this.attach_DOITRAs), new Action<DOITRA>(this.detach_DOITRAs));
 			this._KHUYENMAI = default(EntityRef<KHUYENMAI>);
+			this._TAIKHOAN = default(EntityRef<TAIKHOAN>);
 			OnCreated();
 		}
 		
@@ -1010,6 +1017,30 @@ namespace WedBanQuanAo.Models
 					this._MAHD = value;
 					this.SendPropertyChanged("MAHD");
 					this.OnMAHDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TENTK", DbType="VarChar(50)")]
+		public string TENTK
+		{
+			get
+			{
+				return this._TENTK;
+			}
+			set
+			{
+				if ((this._TENTK != value))
+				{
+					if (this._TAIKHOAN.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnTENTKChanging(value);
+					this.SendPropertyChanging();
+					this._TENTK = value;
+					this.SendPropertyChanged("TENTK");
+					this.OnTENTKChanged();
 				}
 			}
 		}
@@ -1134,6 +1165,40 @@ namespace WedBanQuanAo.Models
 						this._MAKM = default(string);
 					}
 					this.SendPropertyChanged("KHUYENMAI");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_HOADON", Storage="_TAIKHOAN", ThisKey="TENTK", OtherKey="TENTK", IsForeignKey=true)]
+		public TAIKHOAN TAIKHOAN
+		{
+			get
+			{
+				return this._TAIKHOAN.Entity;
+			}
+			set
+			{
+				TAIKHOAN previousValue = this._TAIKHOAN.Entity;
+				if (((previousValue != value) 
+							|| (this._TAIKHOAN.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._TAIKHOAN.Entity = null;
+						previousValue.HOADONs.Remove(this);
+					}
+					this._TAIKHOAN.Entity = value;
+					if ((value != null))
+					{
+						value.HOADONs.Add(this);
+						this._TENTK = value.TENTK;
+					}
+					else
+					{
+						this._TENTK = default(string);
+					}
+					this.SendPropertyChanged("TAIKHOAN");
 				}
 			}
 		}
@@ -2274,6 +2339,8 @@ namespace WedBanQuanAo.Models
 		
 		private EntitySet<DOITRA> _DOITRAs;
 		
+		private EntitySet<HOADON> _HOADONs;
+		
 		private EntityRef<QUYEN> _QUYEN;
 		
     #region Extensibility Method Definitions
@@ -2292,6 +2359,7 @@ namespace WedBanQuanAo.Models
 		{
 			this._THONGTINTAIKHOAN = default(EntityRef<THONGTINTAIKHOAN>);
 			this._DOITRAs = new EntitySet<DOITRA>(new Action<DOITRA>(this.attach_DOITRAs), new Action<DOITRA>(this.detach_DOITRAs));
+			this._HOADONs = new EntitySet<HOADON>(new Action<HOADON>(this.attach_HOADONs), new Action<HOADON>(this.detach_HOADONs));
 			this._QUYEN = default(EntityRef<QUYEN>);
 			OnCreated();
 		}
@@ -2402,6 +2470,19 @@ namespace WedBanQuanAo.Models
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="TAIKHOAN_HOADON", Storage="_HOADONs", ThisKey="TENTK", OtherKey="TENTK")]
+		public EntitySet<HOADON> HOADONs
+		{
+			get
+			{
+				return this._HOADONs;
+			}
+			set
+			{
+				this._HOADONs.Assign(value);
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="QUYEN_TAIKHOAN", Storage="_QUYEN", ThisKey="MAQUYEN", OtherKey="MAQUYEN", IsForeignKey=true)]
 		public QUYEN QUYEN
 		{
@@ -2463,6 +2544,18 @@ namespace WedBanQuanAo.Models
 		}
 		
 		private void detach_DOITRAs(DOITRA entity)
+		{
+			this.SendPropertyChanging();
+			entity.TAIKHOAN = null;
+		}
+		
+		private void attach_HOADONs(HOADON entity)
+		{
+			this.SendPropertyChanging();
+			entity.TAIKHOAN = this;
+		}
+		
+		private void detach_HOADONs(HOADON entity)
 		{
 			this.SendPropertyChanging();
 			entity.TAIKHOAN = null;

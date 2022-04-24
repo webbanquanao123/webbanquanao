@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{793AD18B-3EB4-465D-9593-36666B25D0D0}</ProjectGuid>
+    <ProjectGuid>{919F9FDB-1815-4C55-BEE5-5643074CD035}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WedBanQuanAo</RootNamespace>
-    <AssemblyName>WedBanQuanAo</AssemblyName>
+    <RootNamespace>WebsiteShopQuanAo</RootNamespace>
+    <AssemblyName>WebsiteShopQuanAo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -109,7 +109,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -125,6 +125,100 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="lib\cssDesign\css\bootstrap.min.css" />
+    <Content Include="lib\cssDesign\css\elegant-icons.css" />
+    <Content Include="lib\cssDesign\css\font-awesome.min.css" />
+    <Content Include="lib\cssDesign\css\magnific-popup.css" />
+    <Content Include="lib\cssDesign\css\nice-select.css" />
+    <Content Include="lib\cssDesign\css\owl.carousel.min.css" />
+    <Content Include="lib\cssDesign\css\slicknav.min.css" />
+    <Content Include="lib\cssDesign\css\style.css" />
+    <Content Include="lib\cssDesign\fonts\ElegantIcons.svg" />
+    <Content Include="lib\cssDesign\fonts\fontawesome-webfont.svg" />
+    <Content Include="lib\cssDesign\img\about\about-us.jpg" />
+    <Content Include="lib\cssDesign\img\about\team-1.jpg" />
+    <Content Include="lib\cssDesign\img\about\team-2.jpg" />
+    <Content Include="lib\cssDesign\img\about\team-3.jpg" />
+    <Content Include="lib\cssDesign\img\about\team-4.jpg" />
+    <Content Include="lib\cssDesign\img\about\testimonial-author.jpg" />
+    <Content Include="lib\cssDesign\img\about\testimonial-pic.jpg" />
+    <Content Include="lib\cssDesign\img\banner\banner-1.jpg" />
+    <Content Include="lib\cssDesign\img\banner\banner-2.jpg" />
+    <Content Include="lib\cssDesign\img\banner\banner-3.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-1.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-2.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-3.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-4.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-5.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-6.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-7.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-8.jpg" />
+    <Content Include="lib\cssDesign\img\blog\blog-9.jpg" />
+    <Content Include="lib\cssDesign\img\blog\details\blog-author.jpg" />
+    <Content Include="lib\cssDesign\img\blog\details\blog-details.jpg" />
+    <Content Include="lib\cssDesign\img\breadcrumb-bg.jpg" />
+    <Content Include="lib\cssDesign\img\clients\client-1.png" />
+    <Content Include="lib\cssDesign\img\clients\client-2.png" />
+    <Content Include="lib\cssDesign\img\clients\client-3.png" />
+    <Content Include="lib\cssDesign\img\clients\client-4.png" />
+    <Content Include="lib\cssDesign\img\clients\client-5.png" />
+    <Content Include="lib\cssDesign\img\clients\client-6.png" />
+    <Content Include="lib\cssDesign\img\clients\client-7.png" />
+    <Content Include="lib\cssDesign\img\clients\client-8.png" />
+    <Content Include="lib\cssDesign\img\footer-logo.png" />
+    <Content Include="lib\cssDesign\img\hero\hero-1.jpg" />
+    <Content Include="lib\cssDesign\img\hero\hero-2.jpg" />
+    <Content Include="lib\cssDesign\img\icon\calendar.png" />
+    <Content Include="lib\cssDesign\img\icon\cart.png" />
+    <Content Include="lib\cssDesign\img\icon\compare.png" />
+    <Content Include="lib\cssDesign\img\icon\heart.png" />
+    <Content Include="lib\cssDesign\img\icon\search.png" />
+    <Content Include="lib\cssDesign\img\instagram\instagram-1.jpg" />
+    <Content Include="lib\cssDesign\img\instagram\instagram-2.jpg" />
+    <Content Include="lib\cssDesign\img\instagram\instagram-3.jpg" />
+    <Content Include="lib\cssDesign\img\instagram\instagram-4.jpg" />
+    <Content Include="lib\cssDesign\img\instagram\instagram-5.jpg" />
+    <Content Include="lib\cssDesign\img\instagram\instagram-6.jpg" />
+    <Content Include="lib\cssDesign\img\logo.png" />
+    <Content Include="lib\cssDesign\img\payment.png" />
+    <Content Include="lib\cssDesign\img\product-sale.png" />
+    <Content Include="lib\cssDesign\img\product\product-1.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-10.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-11.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-12.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-13.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-14.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-2.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-3.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-4.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-5.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-6.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-7.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-8.jpg" />
+    <Content Include="lib\cssDesign\img\product\product-9.jpg" />
+    <Content Include="lib\cssDesign\img\shop-details\details-payment.png" />
+    <Content Include="lib\cssDesign\img\shop-details\product-big-2.png" />
+    <Content Include="lib\cssDesign\img\shop-details\product-big-3.png" />
+    <Content Include="lib\cssDesign\img\shop-details\product-big-4.png" />
+    <Content Include="lib\cssDesign\img\shop-details\product-big.png" />
+    <Content Include="lib\cssDesign\img\shop-details\thumb-1.png" />
+    <Content Include="lib\cssDesign\img\shop-details\thumb-2.png" />
+    <Content Include="lib\cssDesign\img\shop-details\thumb-3.png" />
+    <Content Include="lib\cssDesign\img\shop-details\thumb-4.png" />
+    <Content Include="lib\cssDesign\img\shopping-cart\cart-1.jpg" />
+    <Content Include="lib\cssDesign\img\shopping-cart\cart-2.jpg" />
+    <Content Include="lib\cssDesign\img\shopping-cart\cart-3.jpg" />
+    <Content Include="lib\cssDesign\img\shopping-cart\cart-4.jpg" />
+    <Content Include="lib\cssDesign\js\bootstrap.min.js" />
+    <Content Include="lib\cssDesign\js\jquery-3.3.1.min.js" />
+    <Content Include="lib\cssDesign\js\jquery.countdown.min.js" />
+    <Content Include="lib\cssDesign\js\jquery.magnific-popup.min.js" />
+    <Content Include="lib\cssDesign\js\jquery.nice-select.min.js" />
+    <Content Include="lib\cssDesign\js\jquery.nicescroll.min.js" />
+    <Content Include="lib\cssDesign\js\jquery.slicknav.js" />
+    <Content Include="lib\cssDesign\js\main.js" />
+    <Content Include="lib\cssDesign\js\mixitup.min.js" />
+    <Content Include="lib\cssDesign\js\owl.carousel.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -136,7 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -152,15 +245,40 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="lib\cssDesign\css\style.css.map" />
+    <Content Include="lib\cssDesign\fonts\ElegantIcons.eot" />
+    <Content Include="lib\cssDesign\fonts\ElegantIcons.ttf" />
+    <Content Include="lib\cssDesign\fonts\ElegantIcons.woff" />
+    <Content Include="lib\cssDesign\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\cssDesign\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\cssDesign\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\cssDesign\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lib\cssDesign\fonts\FontAwesome.otf" />
+    <Content Include="lib\cssDesign\sass\style.scss" />
+    <Content Include="lib\cssDesign\sass\_about.scss" />
+    <Content Include="lib\cssDesign\sass\_base.scss" />
+    <Content Include="lib\cssDesign\sass\_blog-details.scss" />
+    <Content Include="lib\cssDesign\sass\_blog-sidebar.scss" />
+    <Content Include="lib\cssDesign\sass\_blog.scss" />
+    <Content Include="lib\cssDesign\sass\_breadcrumb.scss" />
+    <Content Include="lib\cssDesign\sass\_checkout.scss" />
+    <Content Include="lib\cssDesign\sass\_contact.scss" />
+    <Content Include="lib\cssDesign\sass\_footer.scss" />
+    <Content Include="lib\cssDesign\sass\_header.scss" />
+    <Content Include="lib\cssDesign\sass\_hero.scss" />
+    <Content Include="lib\cssDesign\sass\_home-page.scss" />
+    <Content Include="lib\cssDesign\sass\_mixins.scss" />
+    <Content Include="lib\cssDesign\sass\_product.scss" />
+    <Content Include="lib\cssDesign\sass\_responsive.scss" />
+    <Content Include="lib\cssDesign\sass\_shop-details.scss" />
+    <Content Include="lib\cssDesign\sass\_shop.scss" />
+    <Content Include="lib\cssDesign\sass\_shopping-cart.scss" />
+    <Content Include="lib\cssDesign\sass\_variable.scss" />
     <None Include="Models\ShopQuanAo.dbml.layout">
       <DependentUpon>ShopQuanAo.dbml</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\_LayoutPage_Home.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Home\TrangChu.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPageHome.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -178,9 +296,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>1780</DevelopmentServerPort>
+          <DevelopmentServerPort>27661</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:1780/</IISUrl>
+          <IISUrl>http://localhost:27661/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Linq;
-using WedBanQuanAo.Models;
+using WebBanQuanAo.Models;
 namespace WedBanQuanAo.Controllers
 {
     public class SanPhamController : Controller
