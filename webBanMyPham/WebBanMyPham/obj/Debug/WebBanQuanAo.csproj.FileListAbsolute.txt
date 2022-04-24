@@ -1,1 +1,2 @@
 C:\Users\Admin\Desktop\webBanMyPham-main\webBanMyPham-main\WebBanMyPham\WebBanMyPham\obj\Debug\WebBanQuanAo.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\webbanquanao\webBanMyPham\WebBanMyPham\obj\Debug\WebBanQuanAo.csprojResolveAssemblyReference.cache
