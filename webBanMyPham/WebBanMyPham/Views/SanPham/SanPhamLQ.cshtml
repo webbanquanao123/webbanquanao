@@ -1,0 +1,31 @@
+﻿@model List<WebBanMyPham.Models.SanPham>
+
+<div class="row width-details">
+    @{
+        foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-6 col-sm-6;">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="@Url.Content("/Images/SP/" + item.HinhAnh)">
+                        <ul class="product__hover">
+                            <li><a href="#"><img src="~/lib/cssDesign/img/icon/heart.png" alt=""></a></li>
+                            <li><a href="@Url.Action("XemChiTiet", "SanPham", new { maSP = item.Id })"><img src="~/lib/cssDesign/img/icon/search.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6>
+                            @if (item.TenSP.Length > 30)
+                            {
+                                <p class="text-center"><strong title="@item.TenSP">@item.TenSP.Substring(0, 30)...</strong></p> }
+                            else
+                            {
+                                <p class="text-center"><strong title="@item.TenSP">@item.TenSP</strong></p>}
+                        </h6>
+                        <a href="@Url.Action("ThemGioHang", "GioHang", new { @ms=item.Id,@strURL=Request.Url.ToString()})" class="add-cart">+ Add To Cart</a>
+                        <h5>@string.Format("{0:0,0 }", @item.Gia)VNĐ</h5>
+                    </div>
+                </div>
+            </div> 
+        }
+    }
+</div>
